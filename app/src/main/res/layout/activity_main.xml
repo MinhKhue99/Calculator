@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="@dimen/dp_70"
+        android:textAlignment="textEnd"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_56"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonClear"
+        style="@style/clear"
+        android:layout_marginStart="@dimen/dp_10"
+        android:onClick="clearEvent"
+        android:text="@string/label_clear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewResult" />
+
+    <Button
+        android:id="@+id/buttonPlusMinus"
+        style="@style/clear"
+        android:layout_marginStart="@dimen/dp_10"
+        android:onClick="numberEvent"
+        android:text="@string/label_plusminus"
+        android:textSize="@dimen/sp_40"
+        app:layout_constraintStart_toEndOf="@id/buttonClear"
+        app:layout_constraintTop_toTopOf="@id/buttonClear" />
+
+    <Button
+        android:id="@+id/buttonPercent"
+        style="@style/clear"
+        android:layout_marginStart="@dimen/dp_10"
+        android:onClick="percentEvent"
+        android:text="@string/label_percent"
+        app:layout_constraintStart_toEndOf="@id/buttonPlusMinus"
+        app:layout_constraintTop_toTopOf="@id/buttonPlusMinus" />
+
+    <Button
+        android:id="@+id/buttonDiv"
+        style="@style/math_sign"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:onClick="operatorEvent"
+        android:text="@string/label_div"
+        app:layout_constraintStart_toEndOf="@id/buttonPercent"
+        app:layout_constraintTop_toTopOf="@id/buttonPercent" />
+
+    <Button
+        android:id="@+id/button7"
+        style="@style/number"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_15"
+        android:onClick="numberEvent"
+        android:text="@string/label_7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonClear" />
+
+    <Button
+        android:id="@+id/button8"
+        style="@style/number"
+        android:layout_marginStart="@dimen/dp_10"
+        android:onClick="numberEvent"
+        android:text="@string/label_8"
+        app:layout_constraintStart_toEndOf="@id/button7"
+        app:layout_constraintTop_toTopOf="@id/button7" />
+
+    <Button
+        android:id="@+id/button9"
+        style="@style/number"
+        android:layout_marginStart="@dimen/dp_10"
+        android:onClick="numberEvent"
+        android:text="@string/label_9"
+        app:layout_constraintStart_toEndOf="@id/button8"
+        app:layout_constraintTop_toTopOf="@id/button8" />
+
+    <Button
+        android:id="@+id/buttonMul"
+        style="@style/math_sign"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:onClick="operatorEvent"
+        android:text="@string/label_multil"
+        app:layout_constraintStart_toEndOf="@id/button9"
+        app:layout_constraintTop_toTopOf="@id/button9" />
+
+    <Button
+        android:id="@+id/button4"
+        style="@style/number"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_15"
+        android:onClick="numberEvent"
+        android:text="@string/label_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button7" />
+
+    <Button
+        android:id="@+id/button5"
+        style="@style/number"
+        android:layout_marginStart="@dimen/dp_10"
+        android:onClick="numberEvent"
+        android:text="@string/label_5"
+        app:layout_constraintStart_toEndOf="@id/button4"
+        app:layout_constraintTop_toTopOf="@id/button4" />
+
+    <Button
+        android:id="@+id/button6"
+        style="@style/number"
+        android:layout_marginStart="@dimen/dp_10"
+        android:onClick="numberEvent"
+        android:text="@string/label_6"
+        app:layout_constraintStart_toEndOf="@id/button5"
+        app:layout_constraintTop_toTopOf="@id/button5" />
+
+    <Button
+        android:id="@+id/buttonMinus"
+        style="@style/math_sign"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:onClick="operatorEvent"
+        android:text="@string/label_minus"
+        app:layout_constraintStart_toEndOf="@id/button6"
+        app:layout_constraintTop_toTopOf="@id/button6" />
+
+    <Button
+        android:id="@+id/button1"
+        style="@style/number"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_15"
+        android:onClick="numberEvent"
+        android:text="@string/label_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button4" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/number"
+        android:layout_marginStart="@dimen/dp_10"
+        android:onClick="numberEvent"
+        android:text="@string/label_2"
+        app:layout_constraintStart_toEndOf="@id/button1"
+        app:layout_constraintTop_toTopOf="@id/button1" />
+
+    <Button
+        android:id="@+id/button3"
+        style="@style/number"
+        android:layout_marginStart="@dimen/dp_10"
+        android:onClick="numberEvent"
+        android:text="@string/label_3"
+        app:layout_constraintStart_toEndOf="@id/button2"
+        app:layout_constraintTop_toTopOf="@id/button2" />
+
+    <Button
+        android:id="@+id/buttonPlus"
+        style="@style/math_sign"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:onClick="operatorEvent"
+        android:text="@string/label_plus"
+        app:layout_constraintStart_toEndOf="@id/button3"
+        app:layout_constraintTop_toTopOf="@id/button3" />
+
+    <Button
+        android:id="@+id/button0"
+        style="@style/btn_0"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:onClick="numberEvent"
+        android:text="@string/label_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button1" />
+
+    <Button
+        android:id="@+id/buttonDot"
+        style="@style/number"
+        android:layout_marginStart="10dp"
+        android:onClick="numberEvent"
+        android:text="@string/label_dot"
+        app:layout_constraintStart_toEndOf="@id/button0"
+        app:layout_constraintTop_toTopOf="@id/button0" />
+
+    <Button
+        android:id="@+id/buttonEqual"
+        style="@style/math_sign"
+        android:layout_marginStart="8dp"
+        android:onClick="equalEvent"
+        android:text="@string/label_equal"
+        app:layout_constraintStart_toEndOf="@id/buttonDot"
+        app:layout_constraintTop_toTopOf="@id/buttonDot" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
